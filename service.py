@@ -12,3 +12,5 @@ async def orderbook(book, receipt_timestamp):
     # logger.info(f'Top of book prices: {book.book.asks.index(0)[0]} - {book.book.bids.index(0)[0]}')
     # if book.delta:
     #     print(f"Delta from last book contains {len(book.delta[BID]) + len(book.delta[ASK])} entries.")
+
+    # TODO: 存储数据

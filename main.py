@@ -26,7 +26,7 @@ def main():
 
     f = FeedHandler()
     ok_swap_symbols = symbols+[x+"-PERP" for x in symbols]
-    f.add_feed(OKX(max_depth=10, channels=[L2_BOOK], symbols=symbols, callbacks={L2_BOOK: orderbook}))
+    f.add_feed(OKX(max_depth=10, channels=[L2_BOOK], symbols=symbols+ok_swap_symbols, callbacks={L2_BOOK: orderbook}))
     # f.add_feed(Coinbase(channels=[TICKER], symbols=['BTC-USD'], callbacks={TICKER: TickerZMQ(port=5678)}))
     f.add_feed(Pionex(max_depth=10, channels=[L2_BOOK], symbols=symbols, callbacks={L2_BOOK: orderbook}))
 
